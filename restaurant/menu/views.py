@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render
 
 # Create your views here.
 
@@ -9,7 +8,7 @@ from datetime import datetime
 
 def home(request):
     """ Exemple de page HTML, non valide pour que l'exemple soit concis """
-    text = u"""<h1>Bienvenue dans le restaurant !</h1>
+    text = u"""<h1>Bienvenue!! dans le restaurant !</h1>
               <p>Les crêpes bretonnes ça tue des mouettes en plein vol !</p>"""
     return HttpResponse(text)
 
