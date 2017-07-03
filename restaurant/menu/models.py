@@ -25,7 +25,7 @@ class Categorie(models.Model):
     def __str__(self):
         return self.nom
 
-class Plats(models.Model):
+class Plat(models.Model):
     titre = models.CharField(max_length=100)
     auteur = models.CharField(max_length=42)
     contenu = models.TextField(null=True)
