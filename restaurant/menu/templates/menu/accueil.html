@@ -1,0 +1,10 @@
+<p>Coucou</p>
+{% for restaurant in derniers_restaurant %}
+  <div class="restaurant">
+      <h3>{{ restaurant.nom }}</h3>
+      <p>{{ restaurant.contenu|truncatewords_html:80 }}</p>
+
+  </div>
+{% empty %}
+  <p>Aucun restaurant.</p>
+{% endfor %}

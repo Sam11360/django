@@ -5,6 +5,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from datetime import datetime
+from menu.models import Menu, Restaurant
 
 def home(request):
     """ Exemple de page HTML, non valide pour que l'exemple soit concis """
@@ -21,3 +22,14 @@ def addition(request, nombre1, nombre2):
 
     # Retourne nombre1, nombre2 et la somme des deux au tpl
     return render(request, 'menu/addition.html', locals())
+
+def accueil(request):
+    """ Afficher tous les menus des restaurants """
+    restaurant = Restaurant.objects.all() # Nous sélectionnons tous nos articles
+    return render(request, 'menu/accueil.html', {'derniers_restaurant': restaurant})
+
+
+
+def lire(request, id):
+    """ Afficher un article complet """
+    pass # Le code de cette fonction est donné un peu plus loin.
